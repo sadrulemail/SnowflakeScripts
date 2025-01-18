@@ -1,3 +1,8 @@
+/*
+Author: Sadrul
+Linkedin: https://www.linkedin.com/in/sadrulalom
+Description: warehouse management through admin procedure
+*/
 1. create an admin role for using procedures
 	CREATE ROLE IF NOT EXISTS rol_mgt;
 
