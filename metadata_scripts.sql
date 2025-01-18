@@ -1,3 +1,8 @@
+/*
+Author: Sadrul
+Linkedin: https://www.linkedin.com/in/sadrulalom
+Description: warehouse management through admin procedure
+*/
 -- drop procedure show_warehouse_metadata(STRING);
 CREATE OR REPLACE PROCEDURE show_warehouse_metadata(
 -- Name of the warehouse to show metadata
