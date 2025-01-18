@@ -1,7 +1,7 @@
 /*
 Author: Sadrul
 Linkedin: https://www.linkedin.com/in/sadrulalom
-Description: warehouse management through admin procedure
+Description: Role creation and grand warehouse usage permission
 */
 
 USE ROLE ACCOUNTADMIN;
@@ -36,12 +36,14 @@ $$
 		// Create the role if it does not exist
 		var createRoleSql = `CREATE ROLE IF NOT EXISTS ${ROLE_NAME}`;
 		snowflake.execute({sqlText: createRoleSql});
-		
-		// Grant permissions on the Resource Monitor to the specified role
-        var grant_sql = `GRANT USAGE ON WAREHOUSE ${WAREHOUSE_NAME} TO ROLE ${ROLE_NAME}`;
-        snowflake.execute({sqlText: grant_sql});
-			
-		return `Role ${ROLE_NAME} created and usage permission granted successfully.`;
+		if(WAREHOUSE_NAME == null ){
+			// Grant permissions on the Resource Monitor to the specified role
+			var grant_sql = `GRANT USAGE ON WAREHOUSE ${WAREHOUSE_NAME} TO ROLE ${ROLE_NAME}`;
+			snowflake.execute({sqlText: grant_sql});
+				
+			return `Role ${ROLE_NAME} created and usage permission granted successfully.`;
+		}
+		return `Role ${ROLE_NAME} created successfully.`;
 	} else {
 		return `Role ${ROLE_NAME} already exists.`;
 	}
