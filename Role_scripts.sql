@@ -1,3 +1,9 @@
+/*
+Author: Sadrul
+Linkedin: https://www.linkedin.com/in/sadrulalom
+Description: warehouse management through admin procedure
+*/
+
 USE ROLE ACCOUNTADMIN;
 
 USE DATABASE snowflake_admin_db;
