@@ -1,3 +1,8 @@
+/*
+Author: Sadrul
+Linkedin: https://www.linkedin.com/in/sadrulalom
+Description: warehouse management through admin procedure
+*/
 USE ROLE ACCOUNTADMIN;
 -- create management db if not exist
 CREATE DATABASE IF NOT EXISTS snowflake_admin_db;
