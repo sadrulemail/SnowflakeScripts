@@ -1,3 +1,9 @@
+/*
+Author: Sadrul
+Linkedin: https://www.linkedin.com/in/sadrulalom
+Description: Resource monitor for warehouse
+*/
+
 CREATE OR REPLACE PROCEDURE create_resource_monitor_proc(
     -- Name of the resource monitor to create
 	monitor_name STRING,
